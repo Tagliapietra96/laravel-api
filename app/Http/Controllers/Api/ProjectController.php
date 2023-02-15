@@ -15,4 +15,10 @@ public function index() {
 	return response()->json($projects);
 }
 
+public function show($id){
+    $project = Project::findOrFail($id);
+
+    return response()->json($project);
+}
+
 }
